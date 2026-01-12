@@ -66,5 +66,22 @@ https://cds.climate.copernicus.eu
 
 ##  How to Run
 
+1. Clone the repository:
 ```bash
+git clone https://github.com/f2024109003-annie/soft-adjoint-lorenz96.git
+cd soft-adjoint-lorenz96
+
+2. Install Dependencies:
+pip install jax jaxlib numpy matplotlib
+
+3. Run the experiments:
 python soft_adjoint_lorenz96.py
+
+---
+## Reproducibility
+
+All numerical results reported in the paper are generated using this code.
+The Lorenz–96 experiments can be reproduced by running the provided script
+with default parameters.
+Random seeds are fixed where applicable to ensure consistency across runs.
+
