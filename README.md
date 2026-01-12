@@ -90,4 +90,23 @@ to ensure consistent behavior across runs. The reported RMSE and timing
 results correspond to averaged outcomes over multiple realizations, as
 described in the paper.
 
+## Results Mapping (Paper ↔ Code)
+
+The following components of the paper are supported by this repository:
+
+- **Lorenz–96 Experiments**  
+  Implemented in `soft_adjoint_lorenz96.py`.  
+  This script reproduces the numerical results reported in:
+  - Ensemble scaling analysis
+  - RMSE comparisons between classical and soft adjoint methods
+  - Computational timing measurements
+
+- **Soft Adjoint Gradient Evaluation**  
+  The function `soft_adjoint_grad` implements the aggregated gradient
+  corresponding to the soft Gramian operator defined in the paper.
+
+Quadrotor experiments described in the paper are simulation-based and are
+not included in this repository. These are discussed as conceptual and
+numerical illustrations rather than fully reproducible benchmarks.
+
 
