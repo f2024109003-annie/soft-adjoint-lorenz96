@@ -19,17 +19,16 @@ Description: Implementation of soft adjoint operators for sensitivity analysis
 # ============================================================
 # This code reproduces the Lorenz–96 numerical experiments
 # reported in:
-#
 #   Table 4: Lorenz–96 Scaling (d = 40, n = 100 runs)
 #   Table 5: Comparison with classical adjoint methods
-#
 # Metrics reported:
 #   - RMSE (Root Mean Square Error)
 #   - Wall-clock computation time
-#
 # The soft adjoint gradient corresponds to:
-#   ∇J_soft(x) = (1/|E|) ∑_e T_e^* T_e x
-#
+#   # The soft adjoint gradient corresponds to the paper definition:
+#   ∇J_soft(x) = G_soft (x - x†),
+#   where G_soft = ∑_e w_e T_e* T_e
+# Uniform weights w_e = 1/|E| are used in the default experiments.
 # Automatic differentiation is implemented using JAX.
 # ============================================================
 
