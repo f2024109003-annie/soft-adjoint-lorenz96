@@ -9,10 +9,30 @@ Original file is located at
 
 """
 Soft Adjoint Framework for Lorenz-96 Model
-Author: Your Name
+Author: Quratulain
 Date: 2025-12-26
 Description: Implementation of soft adjoint operators for sensitivity analysis
              over ensemble-derived soft forcing. Suitable for chaotic systems.
+
+# ============================================================
+# Paper Mapping
+# ============================================================
+# This code reproduces the Lorenz–96 numerical experiments
+# reported in:
+#
+#   Table 4: Lorenz–96 Scaling (d = 40, n = 100 runs)
+#   Table 5: Comparison with classical adjoint methods
+#
+# Metrics reported:
+#   - RMSE (Root Mean Square Error)
+#   - Wall-clock computation time
+#
+# The soft adjoint gradient corresponds to:
+#   ∇J_soft(x) = (1/|E|) ∑_e T_e^* T_e x
+#
+# Automatic differentiation is implemented using JAX.
+# ============================================================
+
 """
 
 import jax.numpy as jnp
