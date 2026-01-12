@@ -109,4 +109,22 @@ Quadrotor experiments described in the paper are simulation-based and are
 not included in this repository. These are discussed as conceptual and
 numerical illustrations rather than fully reproducible benchmarks.
 
+## Data Availability
+
+The atmospheric uncertainty structure used in this work is motivated by the
+ERA5 ensemble reanalysis dataset provided by the European Centre for
+Medium-Range Weather Forecasts (ECMWF), which is publicly available via the
+Copernicus Climate Data Store:
+
+https://cds.climate.copernicus.eu/
+
+Due to data volume and licensing constraints, raw ERA5 ensemble files are not
+included in this repository. Instead, the numerical experiments use
+programmatically generated ensemble forcings that are consistent with the
+statistical properties described in the paper.
+
+All numerical results reported in the paper can be reproduced using the code
+provided in this repository.
+
+
 
